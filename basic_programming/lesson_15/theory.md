@@ -869,7 +869,7 @@ public double[] getCoordinates() {
 
 #### Создание Базовых Тестовых Случаев
 
-- **Определение Теста:** Тестовый случай в JUnit - это метод, аннотированный `@Test`, который проверяет определенный
+- **Определение Теста:** Тестовый случай в JUnit - это метод, аннотированный `@testFirst`, который проверяет определенный
   аспект поведения вашего кода.
 - **Структура Теста:** Каждый тест обычно следует трехэтапной структуре: подготовка (arrange), действие (act),
   утверждение (assert).
@@ -930,16 +930,16 @@ public class UtilityClass {
 
 ```java
 import static org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.testFirst;
 
 public class UtilityClassTest {
 
-    @Test
+    @testFirst
     public void testAdd() {
         assertEquals(5, UtilityClass.add(2, 3));
     }
 
-    @Test
+    @testFirst
     public void testIsEven() {
         assertTrue(UtilityClass.isEven(4));
         assertFalse(UtilityClass.isEven(5));
@@ -948,7 +948,7 @@ public class UtilityClassTest {
     // Для тестирования void методов обычно проверяют побочные эффекты, но так как наш метод просто печатает сообщение, 
     // мы пропустим тестирование этого метода.
 
-    @Test
+    @testFirst
     public void testReverseString() {
         assertEquals("cba", UtilityClass.reverseString("abc"));
     }
