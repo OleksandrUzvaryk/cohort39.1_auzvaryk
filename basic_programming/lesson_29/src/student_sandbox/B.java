@@ -1,4 +1,4 @@
 package student_sandbox;
 
-public class A {
+public class B {
 }
