@@ -5,16 +5,23 @@ import java.util.Set;
 
 public class Service {
 
-    public Set <String> makeUnique (Set<String> first, Set<String> second) {
+    public Set<String> makeUnique(Set<String> first, Set<String> second) {
         Set<String> result = new HashSet<>();
-        if (first != null){
-            for (String el:second) {
-                if (first.contains(el)){
-                    first.remove(el);
-                }else {first.add(el);}
+        if (first != null) {
+            for (String el : first) {
+                result.add(el);
             }
         }
-        result.addAll(first);
-    return result;
+        if (second != null) {
+            for (String el : second) {
+                if (result.contains(el)) {
+                    result.remove(el);
+                } else {
+                    result.add(el);
+                }
+            }
+
+        }
+        return result;
     }
 }

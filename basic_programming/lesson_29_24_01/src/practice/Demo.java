@@ -24,9 +24,44 @@ public class Demo {
         second.add("8");
         second.add("9");
 
-        Service b = new Service();
-        Set<String> result =  b.makeUnique(first,second);
+        Service service = new Service();
+        Set<String> result =  service.makeUnique(first,second);
         System.out.println(result);
+        System.out.println(first);
+        System.out.println(second);
 
 
-    }}
+
+    }
+
+    public static Set<String> makeUnique(Set<String> first, Set<String> second) {
+        Set<String> result = new HashSet<>();
+        if (first != null) {
+            for (String el : first) {
+                result.add(el);
+            }
+        }
+        if (second != null) {
+            for (String el : second) {
+                if (result.contains(el)) {
+                    result.remove(el);
+                } else {
+                    result.add(el);
+                }
+            }
+
+        }
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+

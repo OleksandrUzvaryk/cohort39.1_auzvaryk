@@ -75,6 +75,14 @@ public class SetPractice {
         Set<String> union = unionSet(one, two);
         print(union);
 
+        System.out.println("--------------------------------");
+        print(one);
+        print(two);
+        Set<String> result = makeUnique(one,two);
+        print(result);
+
+
+
     }
 
     //метод распечатает любой класс, который имплементирует интерфейс Iterable, то есть это может быть любая коллекция
@@ -106,19 +114,23 @@ public class SetPractice {
 
     // Задача 2. Разность множеств: Создайте метод, который принимает два множества и возвращает новое множество,
     // содержащее только уникальные элементы из двух сетов (не совпадающие)
-    public static Set<String> uniqueElement(Set<String> first, Set<String> second) {
-
+    public static Set<String> makeUnique(Set<String> first, Set<String> second) {
         Set<String> result = new HashSet<>();
         if (first != null) {
-            for (String el : second) {
-                if (first.contains(el)) {
-                    first.remove(el);
-                } else {
-                    first.add(el);
-                }
+            for (String el : first) {
+                result.add(el);
             }
         }
-        result.addAll(first);
+        if (second != null) {
+            for (String el : second) {
+                if (result.contains(el)) {
+                    result.remove(el);
+                } else {
+                    result.add(el);
+                }
+            }
+
+        }
         return result;
     }
 }
