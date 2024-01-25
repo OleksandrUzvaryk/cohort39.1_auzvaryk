@@ -59,14 +59,14 @@ public class SetPractice {
         //immutable.add("four");
         //immutable.remove("one");
 
-        Set<String> one  = new HashSet<>();
+        Set<String> one = new HashSet<>();
         one.add("one");
         one.add("two");
         one.add("three");
         one.add("four");
 
 
-        Set<String> two  = new HashSet<>();
+        Set<String> two = new HashSet<>();
         two.add("three");
         two.add("four");
         two.add("five");
@@ -88,7 +88,7 @@ public class SetPractice {
     // Задача1. Объединение множеств: Напишите метод, который принимает два множества и возвращает новое множество,
     // содержащее их объединение.
     public static Set<String> unionSet(Set<String> first, Set<String> second) {
-        if(first != null) {
+        if (first != null) {
             first.addAll(second);
             return first;
         }
@@ -108,7 +108,18 @@ public class SetPractice {
     // содержащее только уникальные элементы из двух сетов (не совпадающие)
     public static Set<String> uniqueElement(Set<String> first, Set<String> second) {
 
-        //ваш код тут
-        return null;
+        Set<String> result = new HashSet<>();
+        if (first != null) {
+            for (String el : second) {
+                if (first.contains(el)) {
+                    first.remove(el);
+                } else {
+                    first.add(el);
+                }
+            }
+        }
+        result.addAll(first);
+        return result;
     }
 }
+
