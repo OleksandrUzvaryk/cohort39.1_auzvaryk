@@ -1,4 +1,4 @@
-package practice;
+package hometask;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -24,15 +24,15 @@ public class Demo {
         second.add("8");
         second.add("9");
 
+        System.out.println("Первая коллекция "+first);
+        System.out.println("Вторая  коллекция " + second);
+
         Service service = new Service();
         Set<String> result1 =  service.makeUnique(first,second);
-        System.out.println(result1);
-        System.out.println(first);
-        System.out.println(second);
+        System.out.println("Совмещение  коллекций по принципу разных значений => " + result1);
 
         Set<String> result2 = service.makeSame(first,second);
-        System.out.println(result2);
-
+        System.out.println("Совмещение  коллекций по принципу одинаковых значений => "+ result2);
 
 
 

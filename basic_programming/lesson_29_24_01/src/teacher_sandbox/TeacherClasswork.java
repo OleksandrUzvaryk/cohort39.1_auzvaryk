@@ -19,15 +19,21 @@ public class TeacherClasswork {
 
         System.out.println("str1.hashCode() = " + str1.hashCode());
         System.out.println("str2.hashCode() = " + str2.hashCode());
-        str1.equals(str2);
+        System.out.println(str1==str2);
+        System.out.println(str1.equals(str2));
+        System.out.println("--------------------------");
 
         int[] nums1 = {1, 2, 3};
         int[] nums2 = {1, 2, 3};
         System.out.println("nums1 == nums2 = " + (nums1 == nums2));
         System.out.println("nums1.equals(nums2) = " + nums1.equals(nums2));
         System.out.println("Arrays.equals(nums1, nums2) = " + Arrays.equals(nums1, nums2));
+        System.out.println("--------------------------");
+
         System.out.println("nums1.hashCode() = " + nums1.hashCode());
         System.out.println("nums2.hashCode() = " + nums2.hashCode());
+        System.out.println("--------------------------");
+
         nums2[1] = 111;
         System.out.println("nums2.hashCode() = " + nums2.hashCode());
 
