@@ -24,4 +24,31 @@ public class Service {
         }
         return result;
     }
+
+
+
+
+    public Set<String> makeSame(Set<String> first, Set<String> second) {
+        Set<String> result = new HashSet<>();
+
+        if (first != null) {
+            for (String el : first) {
+                result.add(el);
+            }
+        }
+        for (String el2:second) {
+            if (result.contains(el2)){
+                result.add(el2);
+            }
+        }
+        for (String el3: first
+             ) {
+            if(result.contains(el3)){
+                result.remove(el3);
+            }
+
+        }
+        return result;
+    }
+
 }
