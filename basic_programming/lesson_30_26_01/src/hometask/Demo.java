@@ -15,6 +15,13 @@ public class Demo {
         map.put(4,"B");
         map.put(5,"C");
         map.put(null,"C");
+        map.put(6,null);
+        map.put(7,"C");
+        map.put(7,null);
+
+        Method sevice = new Method();
+        sevice.removeSameValues(map);
+        System.out.println("Map after sort >" + map);
 
 
          /* Работа с Map
