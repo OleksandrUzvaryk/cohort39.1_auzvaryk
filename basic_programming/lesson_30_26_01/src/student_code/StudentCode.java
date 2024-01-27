@@ -26,7 +26,13 @@ public class StudentCode {
         }
 
         ArrayList<String> values = new ArrayList<>(myMap.values());
-        System.out.println(values);
+        for (String value:values
+             ) {
+            System.out.println(value);
+        }
+      
+      
+       // System.out.println(values);
 
         System.out.println(myMap.containsKey("Germany"));
         System.out.println(myMap.containsValue(" sd"));
