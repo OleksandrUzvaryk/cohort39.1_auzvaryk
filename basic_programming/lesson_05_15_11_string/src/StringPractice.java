@@ -2,7 +2,7 @@ public class StringPractice {
     public static void main(String[] args) {
         // Задача 1: Получить длину строки
         String str1 = "Hello";
-        int length = 0;
+        int length = str1.length();
         System.out.println("Длина строки str1: " + length);
 
         // Задача 2: Преобразовать строку в верхний регистр

@@ -23,8 +23,14 @@ public class Demo {
         System.out.println("----------------------------------------------------------------------------------------");
         Method service = new Method();
         service.removeSameValues(map);
-        System.out.println("Map after sort >" + map);
+        System.out.println("Map after sort 1 >" + map);
+        service.removeSameValues2(map);
+        System.out.println("Map after sort 2 >" +map);
+       /* service.removeSameValues3(map);
+        System.out.println("Map after sort 3 >" +map);*/
 
+       /* map.remove(2,"BMW");
+        System.out.println(map);*/
 
 
     }
