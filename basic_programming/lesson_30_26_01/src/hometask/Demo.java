@@ -32,6 +32,21 @@ public class Demo {
        /* map.remove(2,"BMW");
         System.out.println(map);*/
 
+        Map<Integer,String> result = removeSameValues(map);
+        System.out.println(map);
+
 
     }
+    public static Map removeSameValues(Map<Integer, String> map) {
+        Map<Integer, String> mapTempo = new HashMap<>();
+        for (Map.Entry<Integer, String> pair : map.entrySet()) {
+            if (!mapTempo.containsValue(pair.getValue())) {
+                mapTempo.put(pair.getKey(), pair.getValue());
+            }
+        }
+        map.clear();
+        map.putAll(mapTempo);
+        return map;
+    }
+
 }
