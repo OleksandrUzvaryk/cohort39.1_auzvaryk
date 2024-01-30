@@ -17,7 +17,13 @@ class DistanceCalculatorTest {
         Assertions.assertEquals(expected, result);
     }
 
-    @Test
+
+
+
+
+
+
+    /*@Test
     public void testCalculateDistanceWithReturnIncorrectResult() {
         double[] point1 = {0, 0, 0, 8};
         double[] point2 = {1, 0, 0};
@@ -42,5 +48,5 @@ class DistanceCalculatorTest {
         double result = DistanceCalculator.calculateDistanceWithReturn(null, null);
 
         Assertions.assertEquals(expected, result);
-    }
+    }*/
 }

@@ -432,7 +432,7 @@ public void printMessage() {
 <summary><strong><em> Пример использования нескольких аргументов: (нажмите на треугольник, чтобы развернуть текст)</em></strong></summary>
 
 ```java
-public class DistanceCalculator {
+public class DistanceCalculatorTest2 {
 
     public static void main(String[] args) {
         // кооржинаты точки 1
