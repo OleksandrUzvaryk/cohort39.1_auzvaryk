@@ -26,7 +26,7 @@ public class FormatExamples {
         System.out.println(rightAligned); // "   выровненный текст" (с пробелами слева)
 
         // Выравнивание текста по левому краю
-        String leftAligned = String.format("%-20s", "текст");
+        String leftAligned = String.format("%-1200s", "текст");
         System.out.println(leftAligned); // "текст               " (с пробелами справа)
     }
 }

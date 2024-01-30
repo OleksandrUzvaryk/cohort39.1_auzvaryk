@@ -1,6 +1,9 @@
-package teacher_code.language_card;
+package student_code.language_card;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Scanner;
 
 /**
  * Cards - класс для практики использования структуры данных Map <p>
@@ -12,6 +15,8 @@ public class Cards {
     private HashMap<String, String> words = new HashMap<>();
     private static Scanner scanner = new Scanner(System.in);
     private HashSet<String> incorrectWords = new HashSet<>();
+    private HashMap <String, Integer> words2 = new HashMap<>();
+
 
     public void start() {
         boolean continueWorking = true;
@@ -32,9 +37,11 @@ public class Cards {
                     break;
                 case "2":
                     checkKnowledge();
+                    System.out.println("Статистика неправильных ответов => " + words2);
                     break;
                 case "3":
                     checkDifficultWords();
+
                     break;
                 case "4":
                     addWordToIncorrectSet();
@@ -96,6 +103,7 @@ public class Cards {
         // то мы просим пользователя подтвердиь ввод:
         if (!words.containsKey(key)) {
             words.put(key, value);
+            words2.put(key,0);
         } else if (words.containsKey(key) && !value.equals(words.get(key))) {
             System.out.println("Карточка с таким словом уже существует, и меет альтернативный перевод: " +
                     words.get(key) + ". Хотите ли вы заменить занную карточку новым значением? да/нет");
@@ -108,6 +116,8 @@ public class Cards {
 
 
     public void checkKnowledge() {
+
+
         for (String key : words.keySet()) {
             System.out.println("Пожалуйста введите перевод для слова " + key);
             String answer = scanner.nextLine().trim().toUpperCase();
@@ -116,10 +126,13 @@ public class Cards {
             if (answer.equalsIgnoreCase(words.get(key))) {
                 System.out.println("Ответ верный!");
             } else {
-                incorrectWords.add(key);
+                incorrectWords.add(key); words2.put(key, words2.get(key) +1);
             }
         }
     }
+
+
+
 
     public void checkDifficultWords(){
         System.out.println("Начинаем повторение сложных слов:");
