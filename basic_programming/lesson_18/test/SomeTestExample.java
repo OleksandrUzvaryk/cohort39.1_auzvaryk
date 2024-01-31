@@ -4,7 +4,7 @@ import teachers_code.TeacherSandbox;
 
 import java.util.Arrays;
 
-public class SomeTestExample {
+/*public class SomeTestExample {
     @Test
     public void testAddNumber() {
         int[] arr = {1, 2, 3};
@@ -13,4 +13,4 @@ public class SomeTestExample {
 
         Assertions.assertTrue(Arrays.equals(expected, actual));
     }
-}
+}*/

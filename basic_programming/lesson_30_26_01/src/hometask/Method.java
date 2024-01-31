@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Method {
 
-    public void removeSameValues(Map<Integer, String> workMap) {
+    public void  removeSameValues(Map<Integer, String> workMap) {
 
         Map<Integer, String> reserv = new HashMap<>();
 
@@ -20,6 +20,7 @@ public class Method {
         }
         workMap.clear();
         workMap.putAll(reserv);
+
     }
 
     public void removeSameValues2(Map<Integer, String> workMap) {
@@ -30,6 +31,7 @@ public class Method {
                     workMap.remove(key);
             }
         }
+
 
     }
 
