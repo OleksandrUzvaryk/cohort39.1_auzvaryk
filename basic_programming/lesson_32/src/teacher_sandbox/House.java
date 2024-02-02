@@ -3,7 +3,7 @@ package teacher_sandbox;
 import java.util.ArrayList;
 import java.util.TreeSet;
 
-public class House implements Comparable<House> {
+public class House implements Comparable<House>  {
     private double area;
     private String address;
 

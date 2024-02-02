@@ -14,9 +14,7 @@ public class Method {
             if (workMap.containsValue(value)) {
                 if (!reserv.containsValue(value))
                     reserv.put(key, value);
-            } /*else {
-                reserv.remove(key);
-            }*/
+            }
         }
         workMap.clear();
         workMap.putAll(reserv);
@@ -26,33 +24,13 @@ public class Method {
     public void removeSameValues2(Map<Integer, String> workMap) {
 
         for (Integer key : workMap.keySet()) {
-            String value = workMap.get(key);
-            if (workMap.containsValue(workMap.containsValue(value))) {
+            String currentValue = workMap.get(key);
+            boolean isValueIn = workMap.containsValue(currentValue);
+            if (workMap.containsValue(isValueIn)) {
                     workMap.remove(key);
             }
         }
 
 
     }
-
-
-    public void removeSameValues3(Map<Integer,String> map) {
-        for (Map.Entry <Integer, String> entry : map.entrySet()) {
-            Integer key = entry.getKey();
-            String value = entry.getValue();
-            if (map.containsValue(value)){
-                map.remove(key);
-            }
-
-            System.out.println(map);
-        }
-    }
-
-
-
-
-
-
-
-
 }
