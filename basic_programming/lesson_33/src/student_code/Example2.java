@@ -10,7 +10,7 @@ public class Example2 {
 
     File file2 = new File("basic_programming/lesson_33/src/student_code/file.txt");
 
-    Scanner scanner = new Scanner(file2);
+    //Scanner scanner = new Scanner(file2);
 
 
 
