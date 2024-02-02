@@ -51,7 +51,7 @@ public class House implements Comparable<House>  {
 
         System.out.println(Integer.compare(12, 12));
         System.out.println(Integer.compare(12, 34));
-        System.out.println(Integer.compare(102, 34));
+        System.out.println(Integer.compare(102,12));
     }
 }
 

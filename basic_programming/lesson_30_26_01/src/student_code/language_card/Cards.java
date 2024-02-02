@@ -126,7 +126,8 @@ public class Cards {
             if (answer.equalsIgnoreCase(words.get(key))) {
                 System.out.println("Ответ верный!");
             } else {
-                incorrectWords.add(key); words2.put(key, words2.get(key) +1);
+                incorrectWords.add(key);
+                words2.put(key, words2.get(key) +1);
             }
         }
     }
