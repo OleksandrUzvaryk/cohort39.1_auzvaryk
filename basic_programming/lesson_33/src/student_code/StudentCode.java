@@ -34,9 +34,8 @@ public class StudentCode {
         System.out.println("" + file.listFiles());
         System.out.println("" + Arrays.toString(dir.listFiles()));
 
-
-
-
+        System.out.println("Могу писать -  " + file.canWrite());
+        System.out.println("Могу читать -  " + file.canWrite());
 
     }
 }
