@@ -1,0 +1,7 @@
+
+1. Hello, world!
+2. This is the first test file.
+3. It contains multiple lines of text.
+4. exclude this line from merging.
+5. The quick brown fox jumps over the lazy dog.
+6. Java programming is fun.
