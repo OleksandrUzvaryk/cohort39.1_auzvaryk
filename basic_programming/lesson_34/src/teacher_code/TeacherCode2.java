@@ -5,7 +5,7 @@ import java.util.*;
 public class TeacherCode2 {
     public static void main(String[] args) {
         //Queue<String> queue = new PriorityQueue<>(); // сама сортирует последовательность объектов
-        Queue<String> queue = new ArrayDeque<>(); // сохранит последовательность ввода
+        Queue<String> queue = new LinkedList<>(); // сохранит последовательность ввода
 
         // методы add и offer очень похожи и выполняют одну и ту же логику - добавляют элемент в конец очереди
         // но, если очередь ограничена размером, то метод add может привести к исключениям, а offer - нет

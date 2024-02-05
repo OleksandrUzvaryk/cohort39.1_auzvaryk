@@ -1,9 +1,24 @@
 package practice;
 
+import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
 public class StackQueueExercises {
+
+
+    public static void main(String[] args) {
+
+
+
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        reverseQueue(queue);
+
+    }
+
 
     /**
      * Задача 1: Реверс элементов в очереди.<p>
@@ -11,7 +26,14 @@ public class StackQueueExercises {
      * @param queue Очередь, элементы которой нужно реверсировать.
      */
     public static void reverseQueue(Queue<Integer> queue) {
-
+        Stack<Integer>myMap = new Stack<>();
+        while (!queue.isEmpty()){ // очередь 1 2 3
+            myMap.push(queue.poll()); //
+        }
+        while (!myMap.isEmpty()){
+            queue.add(myMap.pop());
+        }
+        System.out.println(queue);
     }
 
     /**
