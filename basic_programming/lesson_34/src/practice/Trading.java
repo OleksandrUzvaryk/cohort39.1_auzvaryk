@@ -12,8 +12,21 @@ public class Trading {
     // [100, 200, 200, 3, 90] -> 100
 
     public static int calculateMaxProfit(int[] prices) {
+
+        int profit = 0;
+        int minPrice = prices[0];
+
+        for (int i = 0; i < prices.length; i++) {
+            if (minPrice >prices[i]) {
+                minPrice = prices[i];
+            }
+            if (profit < prices[i] - minPrice) {
+                profit = prices[i] - minPrice;
+            }
+        }
+
         // logic
-        return 0;
+        return profit;
     }
 
     @Test
