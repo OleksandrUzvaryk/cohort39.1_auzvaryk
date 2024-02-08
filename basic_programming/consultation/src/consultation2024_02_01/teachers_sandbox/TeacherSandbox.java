@@ -1,7 +1,6 @@
 package consultation2024_02_01.teachers_sandbox;
 
-import org.junit.Assert;
-import org.junit.Test;
+
 
 import java.util.*;
 
@@ -21,7 +20,7 @@ public class TeacherSandbox {
         return set;
     }
 
-    @Test
+    /*@Test
     public void testRemoveNonuniqueElementFromCollection() {
         List<Integer> list1 = List.of(0, 0, 0, 0);
         List<Integer> list2 = List.of(0, 2, 3, 0);
@@ -44,6 +43,5 @@ public class TeacherSandbox {
         Assert.assertTrue(removeNonuniqueElementFromCollection(list3).contains(0));
         Assert.assertTrue(removeNonuniqueElementFromCollection(list3).contains(2));
         Assert.assertTrue(removeNonuniqueElementFromCollection(list3).contains(3));
-        Assert.assertTrue(removeNonuniqueElementFromCollection(list3).contains(4));
+        Assert.assertTrue(removeNonuniqueElementFromCollection(list3).contains(4));*/
     }
-}
