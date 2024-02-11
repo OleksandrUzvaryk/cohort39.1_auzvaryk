@@ -10,6 +10,7 @@ public class MostActiveCookie {
         String fileName = null;
         String date = null;
         // Парсинг аргументов командной строки
+
         for (int i = 0; i < args.length; i++) {
             if ("-f".equals(args[i])) {
                 fileName = args[++i]; // Получение имени файла
