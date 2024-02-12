@@ -24,5 +24,6 @@ public class TeacherCode3 {
         for (House house : houses) {
             System.out.println(house);
         }
+
     }
 }
