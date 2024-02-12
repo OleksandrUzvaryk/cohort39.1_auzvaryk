@@ -3,6 +3,7 @@ package teacher_code;
 public class TeacherCode2 {
     public static void main(String[] args) {
 
+        MyInterface myClass = new MyClass();
         System.out.println("Using of abstract method calculate(10, 20) = " + myClass.calculate(10, 20));
         System.out.println("Using of default method calculate(10, -20, 30) = " + myClass.calculate(10, -20, 30));
         System.out.println("Using of static method MyInterface.calculate(10) = " + MyInterface.calculate(10));
