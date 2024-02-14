@@ -29,7 +29,7 @@ public class Demo {
 
         // в качестве дженерика принимает некий тип, этот же тип должен быть возвращен в анонимном методе provide() который и надо переопределить.
         // То есть данный метод должен создавать внутри себя экземпляр класса <дженерик>
-        Provider<Storage> providerExample = ()-> new Storage("Wheels", 410, false);
+        Provider<Storage> providerExample = ()-> new Storage("Wheels", 410.17, false);
         System.out.println(providerExample.provide());
 
 
