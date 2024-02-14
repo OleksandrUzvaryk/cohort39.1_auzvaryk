@@ -6,7 +6,7 @@ import java.util.stream.*;
 public class Classwork {
 
     public static void main(String[] args) {
-//        first();
+       first();
 //        second();
 //        third();
 //        fourth();
@@ -16,15 +16,25 @@ public class Classwork {
     // Задача 1: Найти максимальный элемент в списке.
     static void first() {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+        Stream<Integer> stream = list.stream();
+        Integer max =  stream.max((e1,e2)-> e1-e2).get();
+        System.out.println("max = " + max);
 
-        // С использованием цикла:
+        System.out.println("----------------------");
+
+        stream = list.stream();
+        Integer secondMax = stream.filter(e-> e!= list.stream().max((e1,e2)-> e1-e2).get())
+                .max((e1,e2)-> e1-e2).get();
+        System.out.println(secondMax);
+
+      /*  // С использованием цикла:
         int max = Integer.MIN_VALUE;
         for (int num : list) {
             if (num > max) {
                 max = num;
             }
         }
-        System.out.println(max);  // Output: 5
+        System.out.println(max);  // Output: 5*/
 
         // решить с помощью mapToInt и max
         int maxStream = Integer.MIN_VALUE;
