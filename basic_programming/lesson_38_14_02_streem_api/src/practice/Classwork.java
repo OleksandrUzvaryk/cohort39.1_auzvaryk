@@ -45,6 +45,15 @@ public class Classwork {
     // Задача 2: Собрать все строки в одну, разделенные запятой.
     static void second() {
         List<String> list = Arrays.asList("apple", "banana", "cherry");
+        Set<String> stream = list.stream()
+                .limit(list.size())
+                .collect(Collectors.toSet());
+
+
+
+       // collection.stream().filter((s) -> s.contains("10")).collect(Collectors.toList());
+
+
 
         // С использованием цикла:
         StringBuilder result = new StringBuilder();

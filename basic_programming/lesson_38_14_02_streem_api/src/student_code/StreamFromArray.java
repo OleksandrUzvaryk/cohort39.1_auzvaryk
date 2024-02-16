@@ -31,7 +31,7 @@ public class StreamFromArray {
                 .distinct() //  вернет элементы без повторов
                 .peek(e-> System.out.print(e + " "))// вернет стрим с исходными элементами
                 .map(x-> x+10)
-                .forEach(e-> System.out.println(e));// вывод на печать как в фор ич*/
+                .forEach(v-> System.out.println(v));// вывод на печать как в фор ич*/
 
         // терминальные операции
 
