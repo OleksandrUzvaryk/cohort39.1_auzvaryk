@@ -1,8 +1,6 @@
-package student_code;
+package teacher_code;
 
-public class ThreadExample1 extends Thread {
-
-
+public class ThreadExample1 extends Thread{
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
