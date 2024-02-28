@@ -5,6 +5,23 @@ public class Example {
     public static void main(String[] args) {
         Thread.currentThread().setPriority(3);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         Thread t1 = createThread("t1", 500);
         Thread t2 = createThread("t2", 700);
 
