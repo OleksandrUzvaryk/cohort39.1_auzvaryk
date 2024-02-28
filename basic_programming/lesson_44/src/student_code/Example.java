@@ -2,7 +2,7 @@ package student_code;
 
 public class Example {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Thread.currentThread().setPriority(3);
 
         Thread t1 = createThread("t1", 500);
@@ -12,28 +12,12 @@ public class Example {
 //        Thread t2 = createThreadWithPriority("t2", 1);
 
 
-        //t1.setDaemon(true);// демоны фоновые потоки - тормозятся через метод специальный, или пока есть потоки не демоны
-        //t2.setDaemon(true);
 
         t1.start();
         t2.start();
 
-
-
-        System.out.println("t1 name: " + t1.getName() + "; t1 priority = " + t1.getPriority() +
-                "; isDaemon" + t1.isDaemon() + "; group name "+ t1.getThreadGroup().getName() + "; isInterupted " + t1.isInterrupted() );
-        System.out.println("t2 name: " + t2.getName() + "; t2 priority = " + t2.getPriority()+
-                "; isDaemon" + t2.isDaemon()+ "; group name "+ t2.getThreadGroup().getName()+ "; isInterupted " + t2.isInterrupted());
-
-        System.out.println("Main group " + Thread.currentThread().getThreadGroup().getName());
-
-        //Thread.sleep(1000);
-        t1.interrupt();
-        t2.interrupt();
-
-        System.out.println( "isInterupted " + Thread.currentThread().isInterrupted());
-
-
+        System.out.println("t1 name: " + t1.getName() + "; t1 priority = " + t1.getPriority() + "; isDaemon" + t1.isDaemon());
+        System.out.println("t2 name: " + t2.getName() + "; t2 priority = " + t2.getPriority()+ "; isDaemon" + t2.isDaemon());
 //
 //        Thread.currentThread().setName("MAIN THREAD!!!");
 //
