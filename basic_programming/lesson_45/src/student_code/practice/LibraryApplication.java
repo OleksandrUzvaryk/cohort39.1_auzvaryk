@@ -1,18 +1,16 @@
-package practice;
+package student_code.practice;
 
-import practice.interfaces.AuthorRepository;
-import practice.interfaces.BookRepository;
-import practice.interfaces.ReaderRepository;
-import practice.models.Author;
-import practice.models.Book;
-import practice.repositories.AuthorRepositoryImpl;
-import practice.repositories.BookRepositoryImpl;
-import practice.repositories.ReaderRepositoryImpl;
-import practice.services.AuthorService;
-import practice.services.BookService;
-import practice.services.ReaderService;
+import student_code.practice.interfaces.AuthorRepository;
+import student_code.practice.interfaces.BookRepository;
+import student_code.practice.interfaces.ReaderRepository;
+import student_code.practice.models.Genre;
+import student_code.practice.repositories.AuthorRepositoryImpl;
+import student_code.practice.repositories.BookRepositoryImpl;
+import student_code.practice.repositories.ReaderRepositoryImpl;
+import student_code.practice.services.AuthorService;
+import student_code.practice.services.BookService;
+import student_code.practice.services.ReaderService;
 
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -53,7 +51,30 @@ public class LibraryApplication {
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println(bookService.findAllBook());
+                    // список всех книг
+                    System.out.println("Вывести книги по жанру  -  Нажми 1 . Вывести подряд  - Нажми Enter!");
+                    System.out.println();
+                    scanner.nextLine();
+                    if (scanner.nextLine().equals("1")) {
+                        System.out.println("Введите жанр книги -> " +
+                                "    FANTASY,\n" +
+                                "    ROMANCE,\n" +
+                                "    DRAMA,\n" +
+                                "    MYSTERY,\n" +
+                                "    BIOGRAPHY,\n" +
+                                "    DETECTIVE,\n" +
+                                "    HISTORICAL,\n" +
+                                "    POETRY,\n" +
+                                "    SCIENCE_FICTION,\n" +
+                                "    NONFICTION,\n" +
+                                "    MYTHOLOGY");
+                        String genre = scanner.nextLine();
+                        Genre myG = Genre.valueOf(genre);
+                        System.out.println(bookService.findAllBookByGenre(myG));
+                    } else {System.out.println(bookService.findAllBook());}
+
+
+
                     break;
                 case 2:
                     // Логика отображения списка авторов
@@ -74,6 +95,7 @@ public class LibraryApplication {
                     break;
                 case 4:
                     // Логика добавления новой книги
+                    System.out.println("Запускаем процесс введения в библиотеку новой книги");
                     bookService.addNewBook();
 
                     break;
