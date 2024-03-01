@@ -2,6 +2,7 @@ package teacher_code;
 
 public class ThreadGroupExample {
 
+
     public static void main(String[] args) {
 
         // Создание новой группы потоков
