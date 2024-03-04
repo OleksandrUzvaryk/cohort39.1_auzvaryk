@@ -7,7 +7,7 @@ public class Book {
 
     Author author;
     String title;
-   Enum genre;
+    Enum genre;
 
     public Book(Author author, String title, Enum genre) {
         this.author = author;
