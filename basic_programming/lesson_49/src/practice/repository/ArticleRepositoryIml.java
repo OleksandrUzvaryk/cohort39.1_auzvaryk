@@ -23,7 +23,7 @@ public class ArticleRepositoryIml implements ArticleRepository {
     public void addArticle(Article article) {
         Author author = article.getAuthor();
 
-        Set<Article> temp = allArliclesOfAuthor.getOrDefault(article, new HashSet<>());
+        Set<Article> temp = allArliclesOfAuthor.getOrDefault(author, new HashSet<>());
         temp.add(article);
         allArliclesOfAuthor.put(author, temp);
 
